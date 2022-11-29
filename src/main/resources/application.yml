@@ -1,0 +1,22 @@
+server:
+  port: 8089
+
+redis:
+  server:
+    urls: redis://localhost:6379
+
+jwt:
+  accessToken:
+    expiration:
+      time: 15
+  refreshToken:
+    expiration:
+      count: 50
+      time: 21600
+
+crypt:
+  algorithm:
+    message-digest: SHA-256
+    aes: AES
+  token-secret-key: a
+  global-salt: app-global-salt
